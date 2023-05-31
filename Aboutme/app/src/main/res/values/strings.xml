@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">About me</string>
+    <string name="com">You have sucessfully competed Reading</string>
+    <string name="chara">Monkey D. Luffy</string>
+    <string name="bio">The series focuses on Monkey D. Luffy—a young man made of rubber after
+        unintentionally eating a Devil Fruit—who sets off on a journey from the East Blue Sea to
+        find the deceased King of the Pirates Gol D. Roger\'s ultimate treasure known as the "One Piece",
+        and takeover his prior title. In an effort to organize his own crew, the Straw Hat Pirates,[Jp 1]
+        Luffy rescues and befriends a pirate hunter and swordsman named Roronoa Zoro, and they head off
+        in search of the titular treasure. They are joined in their journey by Nami, a money-obsessed
+        thief and navigator; Usopp, a sniper and compulsive liar; and Sanji, an amorous but chivalrous cook.
+        They acquire a ship, the Going Merry[Jp 2]—later replaced by the Thousand Sunny[Jp 3]—and engage in
+        confrontations with notorious pirates of the East Blue. As Luffy and his crew set out on their adventures,
+        others join the crew later in the series, including Tony Tony Chopper, an anthropomorphized reindeer doctor;
+        Nico Robin, an archaeologist and former Baroque Works assassin; Franky, a cyborg shipwright;
+        Brook, a skeleton musician and swordsman; and Jimbei, a whale shark-type fish-man and former
+        member of the Seven Warlords of the Sea who becomes their helmsman. Together, they encounter
+        other pirates, bounty hunters, criminal organizations, revolutionaries, secret agents, different
+        types of scientists, soldiers of the morally-ambiguous World Government, and various other friends
+        and foes, as they sail the seas in pursuit of their dreams.</string>
+    <string name="completed">Completed</string>
+    <string name="ragain">Read Again</string>
+    <string name="your_nick_name">Your nick Name</string>
+    <string name="todo">TODO</string>
+    <string name="submit">Submit</string>
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">exp1</string>
+    <string name="roll">Roll</string>
+    <string name="dice_image">dice_image</string>
+</resources>
