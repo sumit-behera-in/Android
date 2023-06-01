@@ -6,15 +6,69 @@
             name="string"
             type="com.example.task.Mystrings" />
     </data>
+
     <LinearLayout
         android:id="@+id/myLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#47780E"
         android:orientation="vertical">
+
         <TextView
+            android:id="@+id/heading"
+            android:autoSizeTextType="uniform"
+            android:text="@={string.up}"
+            style="@style/Text" />
+
+        <EditText
+            android:id="@+id/editName"
+            android:drawableLeft="@android:mipmap/sym_def_app_icon"
+            android:visibility="visible"
+            android:hint="Enter your Name"
+            style="@style/Text" />
+        <TextView
+            android:id="@+id/txtName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            />
+            android:visibility="gone"
+            android:text=""
+            style="@style/Text"/>
+
+        <EditText
+            android:id="@+id/editDOB"
+            style="@style/Text"
+            android:layout_width="wrap_content"
+            android:visibility="visible"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@android:drawable/ic_menu_my_calendar"
+            android:hint="Enter your DOB" />
+        <TextView
+            android:id="@+id/txtDOB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Text"
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/editMobile"
+            style="@style/Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@android:drawable/stat_sys_phone_call"
+            android:hint="Enter your Mobile No"
+            android:visibility="visible" />
+        <TextView
+            android:id="@+id/txtMobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Text"
+            android:visibility="gone"/>
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@={string.submit}"
+            style="@style/Text"/>
+
     </LinearLayout>
 </layout>
