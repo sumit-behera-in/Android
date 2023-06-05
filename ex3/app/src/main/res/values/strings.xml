@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ex3</string>
+    <string name="wake_up_to_reality">Wake up to Reality</string>
+    <string name="box2">Box2</string>
+    <string name="box3">Box3</string>
+    <string name="box4">Box4</string>
+    <string name="box5">Box5</string>
 </resources>
