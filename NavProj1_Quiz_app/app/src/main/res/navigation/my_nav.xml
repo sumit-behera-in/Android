@@ -12,34 +12,34 @@
         tools:layout="@layout/fragment_title" >
         <action
             android:id="@+id/action_title_to_q1"
-            app:destination="@id/q1" />
+            app:destination="@id/fragment1" />
     </fragment>
     <fragment
-        android:id="@+id/q1"
+        android:id="@+id/fragment1"
         android:name="com.example.navproj1.Q1"
         android:label="fragment_q1"
         tools:layout="@layout/fragment_q1" >
         <action
             android:id="@+id/action_q1_to_q2"
-            app:destination="@id/q2" />
+            app:destination="@id/fragment2" />
         <action
             android:id="@+id/action_q1_to_title"
             app:destination="@id/title" />
     </fragment>
     <fragment
-        android:id="@+id/q2"
+        android:id="@+id/fragment2"
         android:name="com.example.navproj1.Q2"
         android:label="fragment_q2"
         tools:layout="@layout/fragment_q2" >
         <action
             android:id="@+id/action_q2_to_q3"
-            app:destination="@id/q3" />
+            app:destination="@id/fragment3" />
         <action
             android:id="@+id/action_q2_to_q1"
-            app:destination="@id/q1" />
+            app:destination="@id/fragment1" />
     </fragment>
     <fragment
-        android:id="@+id/q3"
+        android:id="@+id/fragment3"
         android:name="com.example.navproj1.Q3"
         android:label="fragment_q3"
         tools:layout="@layout/fragment_q3" >
@@ -48,6 +48,6 @@
             app:destination="@id/title" />
         <action
             android:id="@+id/action_q3_to_q2"
-            app:destination="@id/q2" />
+            app:destination="@id/fragment2" />
     </fragment>
 </navigation>
