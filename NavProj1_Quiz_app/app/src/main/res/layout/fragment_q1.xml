@@ -70,21 +70,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/retry"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/next"
-        app:layout_constraintHorizontal_bias="0.5"
         android:visibility="gone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Q1d" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/Prev"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/next" />
 
     <Button
         android:id="@+id/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         android:text="@string/next"
-        app:layout_constraintBaseline_toBaselineOf="@+id/retry"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Prev"
+        app:layout_constraintEnd_toStartOf="@+id/retry"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/retry" />
+        app:layout_constraintStart_toEndOf="@+id/Prev" />
+
+    <Button
+        android:id="@+id/Prev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pre"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/next"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Q1d" />
 </androidx.constraintlayout.widget.ConstraintLayout>

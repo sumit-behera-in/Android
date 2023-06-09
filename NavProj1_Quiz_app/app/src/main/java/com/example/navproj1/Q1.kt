@@ -23,6 +23,7 @@ class Q1 : Fragment() {
         val optionD:Button = view.findViewById(R.id.Q1d)
         val next:Button = view.findViewById(R.id.next)
         val retry:Button = view.findViewById(R.id.retry)
+        val pre:Button = view.findViewById(R.id.Prev)
         val buttons = arrayOf(optionB,optionC,optionD)
 
         optionA.setOnClickListener {
@@ -42,7 +43,10 @@ class Q1 : Fragment() {
             val action = Q1Directions.actionQ1ToQ2()
             Navigation.findNavController(view).navigate(action)
         }
-
+        pre.setOnClickListener {
+            val action2 = Q1Directions.actionQ1ToTitle()
+            Navigation.findNavController(view).navigate(action2)
+        }
             return view
     }
 

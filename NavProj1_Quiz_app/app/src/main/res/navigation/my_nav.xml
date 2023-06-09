@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_q1_to_q2"
             app:destination="@id/q2" />
+        <action
+            android:id="@+id/action_q1_to_title"
+            app:destination="@id/title" />
     </fragment>
     <fragment
         android:id="@+id/q2"
@@ -31,6 +34,9 @@
         <action
             android:id="@+id/action_q2_to_q3"
             app:destination="@id/q3" />
+        <action
+            android:id="@+id/action_q2_to_q1"
+            app:destination="@id/q1" />
     </fragment>
     <fragment
         android:id="@+id/q3"
@@ -40,5 +46,8 @@
         <action
             android:id="@+id/action_q3_to_title"
             app:destination="@id/title" />
+        <action
+            android:id="@+id/action_q3_to_q2"
+            app:destination="@id/q2" />
     </fragment>
 </navigation>
