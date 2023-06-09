@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Quiz app</string>
+    <string name="title">Welcome To My game</string>
+    <string name="start">START</string>
+    <string name="question1">1. Who is the president of India?</string>
+    <string name="Q1a">A. Droupadi Murmu</string>
+    <string name="Q1b">B. Narendra Modi</string>
+    <string name="Q1c">C. Naveen Patnaik</string>
+    <string name="Q1d">D. Amit Shah</string>
+    <string name="question2">2. Entomology is the science that studies</string>
+    <string name="Q2a">A. Behavior of human beings</string>
+    <string name="Q2b">B. Insects</string>
+    <string name="Q2c">C. The origin and history of technical and scientific terms</string>
+    <string name="Q2d">D. The formation of rocks</string>
+    <string name="question3">3. For which of the following disciplines is Nobel Prize awarded?</string>
+    <string name="Q3a">A. Physics and Chemistry</string>
+    <string name="Q3b">B. Physiology or Medicine</string>
+    <string name="Q3c">C. Literature, Peace and Economics</string>
+    <string name="Q3d">D. All of the above</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="next">next</string>
+    <string name="retry">Retry</string>
+</resources>

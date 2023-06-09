@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/title">
+
+    <fragment
+        android:id="@+id/title"
+        android:name="com.example.navproj1.Title"
+        android:label="fragment_title"
+        tools:layout="@layout/fragment_title" >
+        <action
+            android:id="@+id/action_title_to_q1"
+            app:destination="@id/q1" />
+    </fragment>
+    <fragment
+        android:id="@+id/q1"
+        android:name="com.example.navproj1.Q1"
+        android:label="fragment_q1"
+        tools:layout="@layout/fragment_q1" >
+        <action
+            android:id="@+id/action_q1_to_q2"
+            app:destination="@id/q2" />
+    </fragment>
+    <fragment
+        android:id="@+id/q2"
+        android:name="com.example.navproj1.Q2"
+        android:label="fragment_q2"
+        tools:layout="@layout/fragment_q2" >
+        <action
+            android:id="@+id/action_q2_to_q3"
+            app:destination="@id/q3" />
+    </fragment>
+    <fragment
+        android:id="@+id/q3"
+        android:name="com.example.navproj1.Q3"
+        android:label="fragment_q3"
+        tools:layout="@layout/fragment_q3" >
+        <action
+            android:id="@+id/action_q3_to_title"
+            app:destination="@id/title" />
+    </fragment>
+</navigation>
