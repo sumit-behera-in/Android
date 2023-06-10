@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.navigation.Navigation
 import  com.example.navex1.Fragment1Directions
@@ -22,6 +23,10 @@ class Fragment1 : Fragment() {
         frag1TextView.setOnClickListener {
             val action = Fragment1Directions.actionFragment1ToFragment2()
             Navigation.findNavController(view).navigate(action)
+        }
+
+        view.findViewById<Button>(R.id.button).setOnClickListener {
+            Navigation.findNavController(view).navigate(Fragment1Directions.actionFragment1ToBottomSheetFragment())
         }
         return view
     }
