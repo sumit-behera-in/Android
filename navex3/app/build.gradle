@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.navex2'
+    namespace 'com.example.navex3'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.navex2"
+        applicationId "com.example.navex3"
         minSdk 28
         targetSdk 33
         versionCode 1

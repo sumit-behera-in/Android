@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/HomeFrag">
+
+    <fragment
+        android:id="@+id/HomeFrag"
+        android:name="com.example.navex2.HomeFrag"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_HomeFrag_to_PersonFrag"
+            app:destination="@id/PersonFrag" />
+        <action
+            android:id="@+id/action_HomeFrag_to_SettingFrag"
+            app:destination="@id/SettingFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/SettingFrag"
+        android:name="com.example.navex2.SettingFrag"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_SettingFrag_to_HomeFrag"
+            app:destination="@id/HomeFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/PersonFrag"
+        android:name="com.example.navex2.PersonFragment"
+        android:label="fragment_person"
+        tools:layout="@layout/fragment_person">
+        <action
+            android:id="@+id/action_PersonFrag_to_HomeFrag"
+            app:destination="@id/HomeFrag" />
+    </fragment>
+</navigation>
