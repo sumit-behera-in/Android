@@ -21,7 +21,8 @@
         tools:layout="@layout/fragment_q1" >
         <action
             android:id="@+id/action_q1_to_q2"
-            app:destination="@id/fragment2" />
+            app:destination="@id/fragment2"
+            app:popUpTo="@id/title" />
         <action
             android:id="@+id/action_q1_to_title"
             app:destination="@id/title" />
@@ -33,7 +34,8 @@
         tools:layout="@layout/fragment_q2" >
         <action
             android:id="@+id/action_q2_to_q3"
-            app:destination="@id/fragment3" />
+            app:destination="@id/fragment3"
+            app:popUpTo="@id/title" />
         <action
             android:id="@+id/action_q2_to_q1"
             app:destination="@id/fragment1" />
@@ -50,4 +52,9 @@
             android:id="@+id/action_q3_to_q2"
             app:destination="@id/fragment2" />
     </fragment>
+    <fragment
+        android:id="@+id/about_frag"
+        android:name="com.example.navproj1.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
 </navigation>
