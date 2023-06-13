@@ -12,7 +12,11 @@
         tools:layout="@layout/fragment_title" >
         <action
             android:id="@+id/action_title_to_q1"
-            app:destination="@id/fragment1" />
+            app:destination="@id/fragment1"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left" />
     </fragment>
     <fragment
         android:id="@+id/fragment1"
@@ -22,10 +26,18 @@
         <action
             android:id="@+id/action_q1_to_q2"
             app:destination="@id/fragment2"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left"
             app:popUpTo="@id/title" />
         <action
             android:id="@+id/action_q1_to_title"
-            app:destination="@id/title" />
+            app:destination="@id/title"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left" />
     </fragment>
     <fragment
         android:id="@+id/fragment2"
@@ -35,10 +47,18 @@
         <action
             android:id="@+id/action_q2_to_q3"
             app:destination="@id/fragment3"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left"
             app:popUpTo="@id/title" />
         <action
             android:id="@+id/action_q2_to_q1"
-            app:destination="@id/fragment1" />
+            app:destination="@id/fragment1"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left" />
     </fragment>
     <fragment
         android:id="@+id/fragment3"
@@ -47,10 +67,18 @@
         tools:layout="@layout/fragment_q3" >
         <action
             android:id="@+id/action_q3_to_title"
-            app:destination="@id/title" />
+            app:destination="@id/title"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left" />
         <action
             android:id="@+id/action_q3_to_q2"
-            app:destination="@id/fragment2" />
+            app:destination="@id/fragment2"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left" />
     </fragment>
     <fragment
         android:id="@+id/about_frag"
