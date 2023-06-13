@@ -21,7 +21,7 @@ class myAdapter(private val data:Array<String>) : RecyclerView.Adapter<myAdapter
     override fun onBindViewHolder(holder: holder, position: Int) {
         holder.titleText.text = data[position]
     }
-        class holder(itemView:View):RecyclerView.ViewHolder(itemView){
+    class holder(itemView:View):RecyclerView.ViewHolder(itemView){
         val titleText :TextView = itemView.findViewById(R.id.txt1)
         val titleImg : ImageView = itemView.findViewById(R.id.img1)
 

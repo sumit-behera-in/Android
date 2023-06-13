@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ex2RecycleView</string>
+    <string name="title">Title</string>
+    <string name="dummy">This is dummy Text</string>
+</resources>
