@@ -22,21 +22,21 @@
     <string name="next">next</string>
     <string name="retry">Retry</string>
     <string name="pre">Previous</string>
-    <string name="about" >👋 Hi, I’m @sumitbehera1508
+    <string name="about" translatable="true">👋 Hi, I’m <b>SUMIT BEHERA</b> \n\n
 
-👀 I’m interested in animes
+👀 I’m interested in animes \n
 
-🌱 I’m currently learning "how to code 👀👀👀👀👀👀 "
+🌱 I’m currently learning "how to code 👀👀👀👀👀👀 " \n\n
 
-📫 How to reach me
-" https://www.linkedin.com/in/sumit-behera-24a52b258/ "
+📫 How to reach me\n
+" https://www.linkedin.com/in/sumit-behera-24a52b258/ "\n\n
 
-GeeksforGeeks :
-" https://auth.geeksforgeeks.org/user/sumitbehera1508/practice "
+GeeksforGeeks :\n
+" https://auth.geeksforgeeks.org/user/sumitbehera1508/practice "\n\n
 
-HackerRank :
-" https://www.hackerrank.com/sumitbehera1508 "
+HackerRank :\n
+" https://www.hackerrank.com/sumitbehera1508 "\n\n
 
-Leetcode :
+Leetcode :\n
 " https://leetcode.com/sumitbehera1508/ "</string>
 </resources>
