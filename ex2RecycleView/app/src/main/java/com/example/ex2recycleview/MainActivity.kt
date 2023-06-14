@@ -2,6 +2,7 @@ package com.example.ex2recycleview
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.LayoutManager
@@ -14,9 +15,19 @@ class MainActivity : AppCompatActivity() {
 
 
         val rcv : RecyclerView = findViewById(R.id.recycleView)
-        rcv.layoutManager = LinearLayoutManager(this)
 
-        val myAdapter : MyAdapter = MyAdapter(dataque())
+        //vertical view
+        //rcv.layoutManager = LinearLayoutManager(this)
+
+        //horizontal view
+        //val myLayoutManager:LayoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
+        //rcv.layoutManager = myLayoutManager
+
+        //grid view
+        val gridLayoutManager = GridLayoutManager(this,2)
+        rcv.layoutManager = gridLayoutManager
+
+        val myAdapter  = MyAdapter(dataque())
         rcv.adapter = myAdapter
 
     }
