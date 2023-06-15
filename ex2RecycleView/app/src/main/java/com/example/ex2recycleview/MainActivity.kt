@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         val gridLayoutManager = GridLayoutManager(this,2)
         rcv.layoutManager = gridLayoutManager
 
-        val myAdapter  = MyAdapter(dataque())
+        val myAdapter  = MyAdapter(dataque(),applicationContext)
         rcv.adapter = myAdapter
 
     }
