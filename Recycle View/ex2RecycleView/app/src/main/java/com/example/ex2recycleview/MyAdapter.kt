@@ -1,5 +1,6 @@
 package com.example.ex2recycleview
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -18,6 +19,17 @@ class MyAdapter(val data:ArrayList<ModelClass>,val context: Context): RecyclerVi
 
     override fun getItemCount(): Int {
         return data.size
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun deleteItem(i:Int){
+        data.removeAt(i)
+        notifyDataSetChanged()
+    }
+    @SuppressLint("NotifyDataSetChanged")
+    fun addItem(i:Int, item:ModelClass){
+        data.add(i,item)
+        notifyDataSetChanged()
     }
 
     override fun onBindViewHolder(holder: holder, position: Int) {

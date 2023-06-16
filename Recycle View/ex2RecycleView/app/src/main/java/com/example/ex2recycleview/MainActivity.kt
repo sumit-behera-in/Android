@@ -1,21 +1,29 @@
 package com.example.ex2recycleview
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.LayoutManager
+import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
+
+    private val tempArray: ArrayList<ModelClass> = arrayListOf<ModelClass>()
+    private val hold:ArrayList<ModelClass> = arrayListOf<ModelClass>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         title = "Recycle View Demo 2"
 
-
-        val rcv : RecyclerView = findViewById(R.id.recycleView)
-
+        val rcv = findViewById<RecyclerView>(R.id.recycleView)
         //vertical view
         //rcv.layoutManager = LinearLayoutManager(this)
 
@@ -30,10 +38,25 @@ class MainActivity : AppCompatActivity() {
         val myAdapter  = MyAdapter(dataque(),applicationContext)
         rcv.adapter = myAdapter
 
+        //swipeGesture
+        val swipeGesture = object : SwipeGesture(this){
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                when(direction){
+                    ItemTouchHelper.LEFT->{
+                        myAdapter.deleteItem(viewHolder.absoluteAdapterPosition)
+                    }
+                    ItemTouchHelper.RIGHT->{
+                        val archivedItem = tempArray[viewHolder.absoluteAdapterPosition]
+                        myAdapter.deleteItem(viewHolder.absoluteAdapterPosition)
+                        myAdapter.addItem(tempArray.size,archivedItem)
+                    }
+                }
+            }
+        }
+        val touchHelper = ItemTouchHelper(swipeGesture)
+        touchHelper.attachToRecyclerView(rcv)
     }
-    fun dataque():ArrayList<ModelClass>{
-
-        val hold: ArrayList<ModelClass> = ArrayList()
+    private fun dataque():ArrayList<ModelClass>{
 
 
         //4g net work
@@ -126,7 +149,38 @@ class MainActivity : AppCompatActivity() {
         hold.add(net2)
         hold.add(obj4)
 
+        tempArray.addAll(hold)
+        return tempArray
+    }
 
-        return hold
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.my_menu,menu)
+        val item:MenuItem? = menu?.findItem(R.id.search_menu)
+        val searchView:SearchView = item?.actionView as SearchView
+        searchView.setOnQueryTextListener(object :SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            @SuppressLint("NotifyDataSetChanged")
+            override fun onQueryTextChange(newText: String?): Boolean {
+                tempArray.clear()
+                val searchText = newText!!.lowercase()
+                if (searchText.isNotEmpty()) {
+                    hold.forEach {
+                        if (it.header.lowercase().contains(searchText)) {
+                            tempArray.add(it)
+                        }
+                    }
+                    findViewById<RecyclerView>(R.id.recycleView).adapter!!.notifyDataSetChanged()
+                }else{
+                    tempArray.clear()
+                    tempArray.addAll(hold)
+                    findViewById<RecyclerView>(R.id.recycleView).adapter!!.notifyDataSetChanged()
+                }
+                return false
+            }
+        })
+        return super.onCreateOptionsMenu(menu)
     }
 }
