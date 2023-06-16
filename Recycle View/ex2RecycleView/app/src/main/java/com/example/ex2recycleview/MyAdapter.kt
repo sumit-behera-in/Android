@@ -39,6 +39,10 @@ class MyAdapter(val data:ArrayList<ModelClass>,val context: Context): RecyclerVi
         holder.title.text = data.get(position).header
         holder.desc.text = data.get(position).desc
 
+        //dummy
+        holder.dummy.text = "this is a demmo"
+
+
         holder.img.setOnClickListener {
             val intent:Intent = Intent(context,MainActivity2::class.java)
             intent.putExtra("imageName",temp.imgnam)
@@ -48,10 +52,24 @@ class MyAdapter(val data:ArrayList<ModelClass>,val context: Context): RecyclerVi
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             context.startActivity(intent)
         }
+
+        //dummy
+        holder.title.setOnClickListener {
+            if(holder.dummy.visibility==View.VISIBLE){
+                holder.dummy.visibility = View.GONE
+            }
+            else{
+                holder.dummy.visibility=View.VISIBLE
+            }
+        }
     }
     class holder(itemView:View):RecyclerView.ViewHolder(itemView){
         val img = itemView.findViewById<ImageView>(R.id.img1)
         val title = itemView.findViewById<TextView>(R.id.txt1)
         val desc:TextView = itemView.findViewById(R.id.txt2)
+
+
+        //
+        val dummy = itemView.findViewById<TextView>(R.id.dummy)
     }
 }

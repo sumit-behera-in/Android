@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.LayoutManager
+import java.util.Collections
 import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
@@ -32,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         //rcv.layoutManager = myLayoutManager
 
         //grid view
-        val gridLayoutManager = GridLayoutManager(this,2)
+        val gridLayoutManager = GridLayoutManager(this,1)
         rcv.layoutManager = gridLayoutManager
 
         val myAdapter  = MyAdapter(dataque(),applicationContext)
@@ -40,6 +41,18 @@ class MainActivity : AppCompatActivity() {
 
         //swipeGesture
         val swipeGesture = object : SwipeGesture(this){
+            override fun onMove(
+                recyclerView: RecyclerView,
+                viewHolder: RecyclerView.ViewHolder,
+                target: RecyclerView.ViewHolder
+            ): Boolean {
+                val from_pos = viewHolder.absoluteAdapterPosition
+                val to_pos = target.absoluteAdapterPosition
+                Collections.swap(hold,from_pos,to_pos)
+                myAdapter.notifyItemMoved(from_pos,to_pos)
+                return false
+            }
+
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 when(direction){
                     ItemTouchHelper.LEFT->{

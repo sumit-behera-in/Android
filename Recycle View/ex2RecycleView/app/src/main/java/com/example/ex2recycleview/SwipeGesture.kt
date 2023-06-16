@@ -8,20 +8,22 @@ import androidx.recyclerview.widget.RecyclerView
 import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator
 
 
-abstract class SwipeGesture(context: Context): ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT) {
+abstract class SwipeGesture(context: Context): ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT
+        or ItemTouchHelper.UP or ItemTouchHelper.DOWN
+        or ItemTouchHelper.START or ItemTouchHelper.END) {
 
     val deleteColor = ContextCompat.getColor(context,R.color.delete)
     val archiveColor = ContextCompat.getColor(context,R.color.archive)
     val deleteIcon = R.drawable.baseline_delete_outline_24
     val archiveIcon = R.drawable.baseline_archive_24
 
-    override fun onMove(
-        recyclerView: RecyclerView,
-        viewHolder: RecyclerView.ViewHolder,
-        target: RecyclerView.ViewHolder
-    ): Boolean {
-        return false
-    }
+//    override fun onMove(
+//        recyclerView: RecyclerView,
+//        viewHolder: RecyclerView.ViewHolder,
+//        target: RecyclerView.ViewHolder
+//    ): Boolean {
+//        return false
+//    }
 
     override fun onChildDraw(
         c: Canvas,
