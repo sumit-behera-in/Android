@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Alarm App</string>
+    <string name="time"> 7 : 35 </string>
+    <string name="selectTime"> SELECT TIME </string>
+    <string name="setAlarm"> SET ALARM </string>
+    <string name="cancelAlarm"> CANCEL ALARM</string>
+</resources>
