@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroung"
+    android:background="@drawable/back"
     tools:context=".Login">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="353dp"
-        android:layout_height="274dp"
+        android:layout_width="257dp"
+        android:layout_height="189dp"
         android:layout_marginTop="70dp"
         app:layout_constraintBottom_toTopOf="@+id/login_Email"
         app:layout_constraintEnd_toEndOf="parent"

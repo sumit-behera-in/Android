@@ -5,4 +5,7 @@
     <string name="name">Name</string>
     <string name="log_in">Log in</string>
     <string name="sign_up">Sign up</string>
+    <string name="dummy">dummy</string>
+    <string name="log_out">Log Out</string>
+    <string name="enter_your_message">Enter Your Message</string>
 </resources>

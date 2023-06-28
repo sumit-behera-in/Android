@@ -18,9 +18,12 @@ class Login : AppCompatActivity() {
 
     private lateinit var Mauth: FirebaseAuth
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        supportActionBar?.hide()
 
         Mauth = FirebaseAuth.getInstance()
 
@@ -48,8 +51,13 @@ class Login : AppCompatActivity() {
         Mauth.signInWithEmailAndPassword(email, pass)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
+
+
+                    val uid:String = Mauth.currentUser?.uid!!
+
                     // Sign in success, update UI with the signed-in user's information
                    val intent = Intent(this,MainActivity::class.java)
+                    finish() // clear current activity from back stack
                     startActivity(intent)
                 } else {
                     // If sign in fails, display a message to the user.
