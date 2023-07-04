@@ -41,7 +41,12 @@ class Login : AppCompatActivity() {
             val email = editEmail.text.toString()
             val pass = editPass.text.toString()
 
-            login(email,pass)
+            if(email=="" || pass ==""){
+                Toast.makeText(this,"Invalid Input",Toast.LENGTH_SHORT).show()
+            }
+            else {
+                login(email, pass)
+            }
         }
 
     }
