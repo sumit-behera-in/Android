@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ScrollView
 import android.widget.TextView
 import android.widget.Toast
 import okhttp3.Call
@@ -33,7 +34,6 @@ class gpt : AppCompatActivity() {
         submit.setOnClickListener {
             val q = question.text.toString().trim()
             if(q.isNotEmpty()){
-                output.background = getDrawable(R.color.black)
                 output.text = "Please Wait...."
                 getResponse(q){response ->
                     runOnUiThread{
@@ -50,8 +50,8 @@ class gpt : AppCompatActivity() {
 
     private fun getResponse(q: String, callBack: (String) -> Unit) {
         val url="https://api.openai.com/v1/engines/text-davinci-003/completions"
-        val ApiKey = "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"
-
+        //val ApiKey = "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"
+        val ApiKey = "dummy"
         val requestBody = """
             {
                 "prompt": "$q",
