@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -64,6 +65,11 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
+
+        findViewById<TextView>(R.id.gpt).setOnClickListener {
+            val intent = Intent(this,gpt::class.java)
+            startActivity(intent);
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

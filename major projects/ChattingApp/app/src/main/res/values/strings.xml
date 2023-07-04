@@ -9,4 +9,6 @@
     <string name="log_out">Log Out</string>
     <string name="enter_your_message">Enter Your Message</string>
     <string name="chatgpt">ChatGpt</string>
+    <string name="enter_your_question_here">enter Your Question Here</string>
+    <string name="submit">submit</string>
 </resources>

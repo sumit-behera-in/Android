@@ -9,7 +9,7 @@
 
     <TextView
 
-        android:id="@+id/txtName"
+        android:id="@+id/gpt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/chatgpt"
@@ -26,11 +26,11 @@
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:layout_below="@+id/txtName"
+        android:layout_below="@+id/gpt"
         android:background="@color/purple_200"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+        app:layout_constraintTop_toBottomOf="@+id/gpt" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/userRecycle"

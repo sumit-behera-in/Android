@@ -44,7 +44,7 @@
         android:autofillHints=""
         android:background="@drawable/edit_background"
         android:ems="10"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:paddingStart="15dp"
         android:layout_marginHorizontal="15dp"
         android:hint="@string/password"
