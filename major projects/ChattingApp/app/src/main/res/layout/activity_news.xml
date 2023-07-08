@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--key is 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 never forget it-->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/back"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".gpt">
+    tools:context=".NewsActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/news_Recycle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bar" />
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/teal_700"
-        app:layout_constraintEnd_toEndOf="parent"
         android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -24,8 +30,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-black"
+            android:text="@string/chats"
             android:textColor="@color/white"
-            android:text="Chats"
             android:textSize="25sp"
             app:layout_constraintEnd_toStartOf="@+id/news"
             app:layout_constraintHorizontal_bias="0.5"
@@ -36,9 +42,9 @@
             android:id="@+id/news"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
             android:fontFamily="sans-serif-black"
-            android:text="News"
+            android:text="@string/news"
+            android:textColor="@color/white"
             android:textSize="25sp"
             app:layout_constraintEnd_toStartOf="@+id/gpt"
             app:layout_constraintHorizontal_bias="0.5"
@@ -49,9 +55,9 @@
             android:id="@+id/gpt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
             android:fontFamily="sans-serif-black"
-            android:text="GPT"
+            android:text="@string/gpt"
+            android:textColor="@color/white"
             android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -59,43 +65,4 @@
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <EditText
-        android:id="@+id/question"
-        android:layout_width="match_parent"
-        android:layout_margin="20dp"
-        android:paddingStart="5dp"
-        android:textSize="20sp"
-        android:textColorHint="#FFFFFF"
-        android:textColor="#ffffff"
-        android:hint="@string/enter_your_question_here"
-        android:layout_height="57dp"
-        tools:ignore="RtlSymmetry,TextFields"
-        android:autofillHints="" />
-    <Button
-        android:id="@+id/submit"
-        android:layout_width="wrap_content"
-        android:background="@drawable/btn_background"
-        android:layout_marginTop="10dp"
-        android:text="@string/submit"
-        android:textColor="#c0c0c0"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content"/>
-
-    <ScrollView
-        android:id="@+id/sroll"
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:layout_margin="20dp"
-        android:layout_marginTop="10dp">
-
-        <TextView
-            android:id="@+id/output"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:textColor="#c0c0c0"
-            android:textSize="20sp" />
-    </ScrollView>
-
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

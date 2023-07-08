@@ -11,4 +11,14 @@
     <string name="chatgpt">ChatGpt</string>
     <string name="enter_your_question_here">enter Your Question Here</string>
     <string name="submit">submit</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="entertain">Entertainment</string>
+    <string name="health">Health</string>
+    <string name="science">Science</string>
+    <string name="sport">Sports</string>
+    <string name="chats">Chats</string>
+    <string name="news">News</string>
+    <string name="gpt">GPT</string>
 </resources>
