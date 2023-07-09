@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ScrollView
@@ -25,6 +27,8 @@ import java.io.IOException
 class gpt : AppCompatActivity() {
     private val mAuth = FirebaseAuth.getInstance()
     private val client = OkHttpClient()
+    private  val url ="https://gitlab.com/sumitbehera1508/Android/-/tree/main/major%20projects/ChattingApp?id=com.example.chattingapp"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gpt)
@@ -43,6 +47,8 @@ class gpt : AppCompatActivity() {
                 getResponse(q){response ->
                     runOnUiThread{
                         output.text = response
+                        output.background = getDrawable(R.drawable.send_background)
+                        output.setTextColor(resources.getColor(R.color.purple_700))
                     }
 
                 }
@@ -69,7 +75,7 @@ class gpt : AppCompatActivity() {
 
     private fun getResponse(q: String, callBack: (String) -> Unit) {
         val url="https://api.openai.com/v1/engines/text-davinci-003/completions"
-        val ApiKey = "dummy api my api"
+        val ApiKey = "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"
         val requestBody = """
             {
                 "prompt": "$q",
@@ -118,4 +124,33 @@ class gpt : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.my_menu,menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        if(item.itemId==R.id.logOut){
+            mAuth.signOut()
+            val intent = Intent(this,Login::class.java)
+            finish() // clear current activity from back stack
+            startActivity(intent)
+        }
+        if(item.itemId==R.id.about){
+            val intent = Intent(this,AboutActivity::class.java)
+            finish() // clear current activity from back stack
+            startActivity(intent)
+        }
+        if(item.itemId==R.id.share){
+            val intent = Intent(Intent.ACTION_SEND)
+            intent.type = "text/plain"
+            intent.putExtra(Intent.EXTRA_TEXT, url)
+            startActivity(Intent.createChooser(intent, "Share this"))
+        }
+
+        return super.onOptionsItemSelected(item)
+    }
+
 }

@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var  userList: ArrayList<User>
     private lateinit var adapter: UserAdapter
 
+    private  val url ="https://gitlab.com/sumitbehera1508/Android/-/tree/main/major%20projects/ChattingApp?id=com.example.chattingapp"
+
     private lateinit var mAuth: FirebaseAuth
     private lateinit var mDbref:DatabaseReference
 
@@ -91,8 +93,19 @@ class MainActivity : AppCompatActivity() {
         if(item.itemId==R.id.logOut){
             mAuth.signOut()
             val intent = Intent(this,Login::class.java)
+         finish() // clear current activity from back stack
+            startActivity(intent)
+        }
+        if(item.itemId==R.id.about){
+            val intent = Intent(this,AboutActivity::class.java)
             finish() // clear current activity from back stack
             startActivity(intent)
+        }
+        if(item.itemId==R.id.share){
+            val intent = Intent(Intent.ACTION_SEND)
+            intent.type = "text/plain"
+            intent.putExtra(Intent.EXTRA_TEXT, url)
+            startActivity(Intent.createChooser(intent, "Share this"))
         }
 
         return super.onOptionsItemSelected(item)

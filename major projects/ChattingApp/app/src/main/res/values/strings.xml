@@ -64,4 +64,17 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+
+    <string name="about" translatable="true">👋 Hi, I’m <b>SUMIT BEHERA</b> \n\n
+📫 How to reach me\n
+" https://www.linkedin.com/in/sumit-behera-24a52b258/ "\n\n
+Github : \n
+        "https://github.com/sumitbehera1508"\n\n
+GeeksforGeeks :\n
+" https://auth.geeksforgeeks.org/user/sumitbehera1508/practice "\n\n
+
+HackerRank :\n
+" https://www.hackerrank.com/sumitbehera1508 "\n\n
+Leetcode :\n
+" https://leetcode.com/sumitbehera1508/ "</string>
 </resources>
