@@ -5,14 +5,23 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.WindowManager
 import android.widget.TextView
 import androidx.core.content.ContextCompat
+import androidx.viewpager2.widget.ViewPager2
+import com.example.chattingapp.adapter.VideoAdapter
+import com.example.chattingapp.model.VideoModel
+import com.firebase.ui.database.FirebaseRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 class NewsActivity : AppCompatActivity() {
     private val mAuth = FirebaseAuth.getInstance()
     private  val url ="https://gitlab.com/sumitbehera1508/Android/-/tree/main/major%20projects/ChattingApp?id=com.example.chattingapp"
 
+    lateinit var viewPager2: ViewPager2
+    lateinit var adapter: VideoAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_news)
@@ -33,6 +42,20 @@ class NewsActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+
+
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+
+        viewPager2 = findViewById(R.id.viewPager)
+
+        val mDataBase = Firebase.database.getReference("videos")
+        val options = FirebaseRecyclerOptions.Builder<VideoModel>()
+            .setQuery(mDataBase, VideoModel::class.java)
+            .build()
+
+        adapter = VideoAdapter(options)
+        viewPager2.adapter = adapter
     }
     override fun onBackPressed() {
         super.onBackPressed()
@@ -70,4 +93,13 @@ class NewsActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
+    override fun onStart() {
+        super.onStart()
+        adapter.startListening()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        adapter.stopListening()
+    }
 }

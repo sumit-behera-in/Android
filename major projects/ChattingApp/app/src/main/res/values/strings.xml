@@ -19,7 +19,7 @@
     <string name="science">Science</string>
     <string name="sport">Sports</string>
     <string name="chats">Chats</string>
-    <string name="news">News</string>
+    <string name="news">Feeds</string>
     <string name="gpt">GPT</string>
     <string name="title_activity_main2">MainActivity2</string>
     <!-- Strings used for fragments for navigation -->
