@@ -16,6 +16,18 @@
         android:theme="@style/Theme.ChattingApp"
         tools:targetApi="31">
         <activity
+<<<<<<< Updated upstream
+=======
+            android:name=".NewsActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+>>>>>>> Stashed changes
             android:name=".gpt"
             android:exported="true" />
         <activity
