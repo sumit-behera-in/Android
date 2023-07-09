@@ -31,8 +31,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        findViewById<TextView>(R.id.Chats).setTextColor(resources.getColor(R.color.purple_500))
-
         mAuth = FirebaseAuth.getInstance()
         mDbref = FirebaseDatabase.getInstance().reference
         userRecyclerView = findViewById(R.id.userRecycle)
@@ -70,14 +68,7 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<TextView>(R.id.gpt).setOnClickListener {
             val intent = Intent(this,gpt::class.java)
-            startActivity(intent)
-            finish()
-        }
-
-        findViewById<TextView>(R.id.news).setOnClickListener {
-            val intent = Intent(this,NewsActivity::class.java)
-            startActivity(intent)
-            finish()
+            startActivity(intent);
         }
     }
 
