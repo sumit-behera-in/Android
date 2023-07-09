@@ -29,26 +29,12 @@ class gpt : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gpt)
 
-        supportActionBar?.setBackgroundDrawable(ContextCompat.getDrawable(this,R.color.teal_700))
-        supportActionBar?.title = mAuth.currentUser?.email
-        findViewById<TextView>(R.id.gpt).setTextColor(resources.getColor(R.color.purple_500))
-
-
-        findViewById<TextView>(R.id.Chats).setOnClickListener {
-            val intent = Intent(this,MainActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-
-        findViewById<TextView>(R.id.news).setOnClickListener {
-            val intent = Intent(this,NewsActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-
         val question = findViewById<EditText>(R.id.question)
         val submit = findViewById<Button>(R.id.submit)
         val output = findViewById<TextView>(R.id.output)
+
+        supportActionBar?.setBackgroundDrawable(ContextCompat.getDrawable(this,R.color.teal_700))
+        supportActionBar?.title = mAuth.currentUser?.email
 
         submit.setOnClickListener {
             val q = question.text.toString().trim()
@@ -65,12 +51,25 @@ class gpt : AppCompatActivity() {
                 output.text = "Enter Some text"
             }
         }
+
+        findViewById<TextView>(R.id.gpt).setTextColor(resources.getColor(R.color.purple_500))
+
+        findViewById<TextView>(R.id.Chats).setOnClickListener {
+            val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        findViewById<TextView>(R.id.news).setOnClickListener {
+            val intent = Intent(this,NewsActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     private fun getResponse(q: String, callBack: (String) -> Unit) {
         val url="https://api.openai.com/v1/engines/text-davinci-003/completions"
-        //val ApiKey = "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"
-        val ApiKey = "dummy"
+        val ApiKey = "dummy api my api"
         val requestBody = """
             {
                 "prompt": "$q",
@@ -110,5 +109,13 @@ class gpt : AppCompatActivity() {
             }
 
         })
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+
+        val intent = Intent(this,MainActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }
