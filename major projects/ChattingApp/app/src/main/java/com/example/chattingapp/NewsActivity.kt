@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.view.WindowManager
 import android.widget.TextView
 import androidx.core.content.ContextCompat
@@ -56,6 +57,7 @@ class NewsActivity : AppCompatActivity() {
 
         adapter = VideoAdapter(options)
         viewPager2.adapter = adapter
+
     }
     override fun onBackPressed() {
         super.onBackPressed()
@@ -103,3 +105,4 @@ class NewsActivity : AppCompatActivity() {
         adapter.stopListening()
     }
 }
+

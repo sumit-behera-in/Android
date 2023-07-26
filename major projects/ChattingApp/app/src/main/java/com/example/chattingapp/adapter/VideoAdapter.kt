@@ -8,6 +8,7 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.VideoView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.chattingapp.DoubleClickListner
 import com.example.chattingapp.R
 import com.example.chattingapp.model.VideoModel
 import com.firebase.ui.database.FirebaseRecyclerAdapter
@@ -49,14 +50,26 @@ class VideoAdapter(options:FirebaseRecyclerOptions<VideoModel?>)
                 mediaPlayer->mediaPlayer.start()
             }
 
-            fav.setOnClickListener {
-                if(!isFav){
-                    fav.setImageResource(R.drawable.baseline_favorite_24)
-                    isFav = true
+            videoView.setOnClickListener(object : DoubleClickListner(){
+                override fun onDoubleCLick(v: View?) {
+                    isFav = if(!isFav){
+                        fav.setImageResource(R.drawable.baseline_favorite_24)
+                        true
+                    } else{
+                        fav.setImageResource(R.drawable.baseline_favorite_border_24)
+                        false
+                    }
                 }
-                else{
+
+            })
+
+            fav.setOnClickListener {
+                isFav = if(!isFav){
+                    fav.setImageResource(R.drawable.baseline_favorite_24)
+                    true
+                } else{
                     fav.setImageResource(R.drawable.baseline_favorite_border_24)
-                    isFav = false
+                    false
                 }
             }
         }

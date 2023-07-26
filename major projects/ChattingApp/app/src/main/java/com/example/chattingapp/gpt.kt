@@ -75,7 +75,7 @@ class gpt : AppCompatActivity() {
 
     private fun getResponse(q: String, callBack: (String) -> Unit) {
         val url="https://api.openai.com/v1/engines/text-davinci-003/completions"
-        val ApiKey = "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"
+        val ApiKey = "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"
         val requestBody = """
             {
                 "prompt": "$q",

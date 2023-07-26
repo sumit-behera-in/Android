@@ -81,31 +81,35 @@
                 android:src="@drawable/baseline_person_4_24"
                 android:padding="2dp"
                 android:layout_marginEnd="18dp"
+                android:layout_marginVertical="10dp"
                 android:layout_gravity="end"
-                android:layout_width="40dp"
-                android:layout_height="40dp"/>
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
             <ImageView
                 android:id="@+id/favorites"
                 android:src="@drawable/baseline_favorite_border_24"
                 android:padding="2dp"
                 android:layout_marginEnd="18dp"
+                android:layout_marginVertical="10dp"
                 android:layout_gravity="end"
-                android:layout_width="40dp"
-                android:layout_height="40dp"/>
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
             <ImageView
                 android:src="@drawable/baseline_share_24"
                 android:padding="2dp"
                 android:layout_marginEnd="18dp"
+                android:layout_marginVertical="10dp"
                 android:layout_gravity="end"
-                android:layout_width="40dp"
-                android:layout_height="40dp"/>
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
             <ImageView
                 android:src="@drawable/baseline_more"
                 android:padding="2dp"
                 android:layout_marginEnd="18dp"
+                android:layout_marginVertical="10dp"
                 android:layout_gravity="end"
-                android:layout_width="40dp"
-                android:layout_height="40dp"/>
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
 
         </LinearLayout>
     </LinearLayout>
