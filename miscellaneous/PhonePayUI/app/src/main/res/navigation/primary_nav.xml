@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/primary_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.phonepayui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/storesFragment"
+        android:name="com.example.phonepayui.StoresFragment"
+        android:label="fragment_stores"
+        tools:layout="@layout/fragment_stores" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.phonepayui.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/welthFragment"
+        android:name="com.example.phonepayui.WelthFragment"
+        android:label="fragment_welth"
+        tools:layout="@layout/fragment_welth" />
+</navigation>

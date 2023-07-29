@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:title="@string/home" android:id="@+id/homeFragment" android:icon="@drawable/baseline_home_24"/>
+        <item android:title="@string/stores" android:id="@+id/storesFragment" android:icon="@drawable/baseline_local_grocery_store_24"/>
+        <item android:icon="@drawable/baseline_currency_rupee_24" android:id="@+id/welthFragment" android:title="@string/welth"/>
+        <item android:title="@string/history" android:id="@+id/historyFragment" android:icon="@drawable/baseline_history_24"/>
+    </group>
+</menu>
