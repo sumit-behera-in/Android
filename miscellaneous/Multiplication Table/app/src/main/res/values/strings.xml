@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Multiplication Table</string>
+    <string name="enter_your_number">ENTER YOUR NUMBER :</string>
+    <string name="number">number</string>
+    <string name="enter">ENTER</string>
+    <string name="demo">demo</string>
+</resources>
