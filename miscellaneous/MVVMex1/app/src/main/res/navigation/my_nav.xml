@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeFragment2">
+
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.example.mvvmex1.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment2_to_categoryFragment2"
+            app:destination="@id/categoryFragment2" />
+        <action
+            android:id="@+id/action_homeFragment2_to_favoritesFragment2"
+            app:destination="@id/favoritesFragment2" />
+        <action
+            android:id="@+id/action_homeFragment2_to_busniessFragment"
+            app:destination="@id/busniessFragment2" />
+        <action
+            android:id="@+id/action_homeFragment2_to_movieFragment"
+            app:destination="@id/movieFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoritesFragment2"
+        android:name="com.example.mvvmex1.fragments.FavoritesFragment"
+        android:label="fragment_favorites"
+        tools:layout="@layout/fragment_favorites" >
+        <action
+            android:id="@+id/action_favoritesFragment2_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+        <action
+            android:id="@+id/action_favoritesFragment2_to_categoryFragment2"
+            app:destination="@id/categoryFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryFragment2"
+        android:name="com.example.mvvmex1.fragments.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_categoryFragment2_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+        <action
+            android:id="@+id/action_categoryFragment2_to_favoritesFragment2"
+            app:destination="@id/favoritesFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/busniessFragment2"
+        android:name="com.example.mvvmex1.fragments.BusniessFragment"
+        android:label="fragment_busniess"
+        tools:layout="@layout/fragment_busniess" >
+        <action
+            android:id="@+id/action_busniessFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+        <action
+            android:id="@+id/action_busniessFragment_to_categoryFragment2"
+            app:destination="@id/categoryFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieFragment2"
+        android:name="com.example.mvvmex1.fragments.MovieFragment"
+        android:label="fragment_movie"
+        tools:layout="@layout/fragment_movie" >
+        <action
+            android:id="@+id/action_movieFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+        <action
+            android:id="@+id/action_movieFragment_to_favoritesFragment2"
+            app:destination="@id/favoritesFragment2" />
+        <action
+            android:id="@+id/action_movieFragment_to_homeFragment22"
+            app:destination="@id/homeFragment2" />
+        <action
+            android:id="@+id/action_movieFragment_to_categoryFragment2"
+            app:destination="@id/categoryFragment2" />
+        <action
+            android:id="@+id/action_movieFragment_to_busniessFragment"
+            app:destination="@id/busniessFragment2" />
+    </fragment>
+</navigation>

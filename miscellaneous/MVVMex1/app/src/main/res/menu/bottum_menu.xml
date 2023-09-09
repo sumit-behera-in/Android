@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/homeFragment2"
+        android:title="@string/home"
+        android:icon="@drawable/baseline_home_24_2"/>
+    <item android:icon="@drawable/baseline_sports_cricket_24"
+        android:title="Sports"
+        android:id="@+id/favoritesFragment2"/>
+    <item android:icon="@drawable/baseline_biotech_24"
+        android:title="Tech"
+        android:id="@+id/categoryFragment2"/>
+    <item android:id="@+id/movieFragment2"
+        android:title="Entertainment"
+        android:icon="@drawable/baseline_movie_24"/>
+    <item android:id="@+id/busniessFragment2"
+        android:title="Business"
+        android:icon="@drawable/baseline_currency_rupee_24"/>
+
+
+</menu>
