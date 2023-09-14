@@ -2,20 +2,19 @@ package com.example.mvvmex1.listners
 
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.view.View
 import android.widget.Toast
-import androidx.browser.customtabs.CustomTabsIntent
 import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
 import com.example.mvvmex1.News
+import com.example.mvvmex1.activity.NewsActivity2
 import com.example.mvvmex1.adapter.NewsAdapter
 
 interface NewsItemClicked {
-    fun onItemClicked(item: News,context: Context,url: String){
-        val intent = CustomTabsIntent.Builder()
-            .build()
-        intent.launchUrl(context, Uri.parse(url))
+    fun onItemClicked(item: News,context: Context,url: String,imgUrl:String,text:String,desc:String){
+       val intent = Intent(context,NewsActivity2::class.java)
+        intent.putExtra("url",url)
+        context.startActivity(intent)
     }
 
     fun shareMe(url:String,mycontext: Context){
@@ -46,7 +45,9 @@ interface NewsItemClicked {
                         newsObject.getString("title"),
                         newsObject.getString("author"),
                         newsObject.getString("url"),
-                        newsObject.getString("urlToImage")
+                        newsObject.getString("urlToImage"),
+                        newsObject.getString("content"),
+                        newsObject.getString("description")
                     )
 
                     newsArray.add(news)

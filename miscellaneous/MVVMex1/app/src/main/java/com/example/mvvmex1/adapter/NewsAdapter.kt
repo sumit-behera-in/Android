@@ -18,7 +18,7 @@ class NewsAdapter(private val listner : NewsItemClicked) : RecyclerView.Adapter<
         val view = LayoutInflater.from(parent.context).inflate(R.layout.single_news,parent,false)
         val viewHolder = Holder(view)
         view.setOnClickListener {
-            listner.onItemClicked(items[viewHolder.adapterPosition],parent.context,items[viewHolder.adapterPosition].url)
+            listner.onItemClicked(items[viewHolder.adapterPosition],parent.context,items[viewHolder.adapterPosition].url,items[viewHolder.adapterPosition].imageUrl,items[viewHolder.adapterPosition].text,items[viewHolder.adapterPosition].desc)
         }
         view.setOnLongClickListener {
             listner.shareMe(items[viewHolder.adapterPosition].url.toString(),parent.context)
